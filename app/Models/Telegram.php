@@ -17,7 +17,7 @@ class Telegram extends Model
         $date = date('Y-m-d');
         $hour = date('H:i');
         $text = " Date: <b>$date</b>\n Hour: <b>$hour</b>\n Number: <b>$number</b>";
-        return Http::post('https://api.telegram.org/bot' . env('telegram_token'). '/sendMessage',
+        return Http::post('https://api.telegram.org/bot' . env('TELEGRAM_TOKEN'). '/sendMessage',
             ['chat_id' => self::chat_id, 'text' => $text, 'parse_mode' => 'html']
         );
     }
