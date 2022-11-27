@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\ScraperController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,5 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', [ScraperController::class, 'scraper'])->name('scraper');
 
+Route::get('/', function () {
+    return view('welcome');
+});

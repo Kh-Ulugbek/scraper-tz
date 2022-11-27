@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Http;
 class Telegram extends Model
 {
     use HasFactory;
-    private const chat_id = 291096722;
+    private const chat_id = -1001652658852;
 
     public function sendMessage($number)
     {
