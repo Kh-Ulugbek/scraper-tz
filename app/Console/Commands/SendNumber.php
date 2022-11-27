@@ -32,6 +32,5 @@ class SendNumber extends Command
         $number = Scraper::getNumber();
         $telegram = new Telegram();
         $telegram->sendMessage($number);
-        echo env('TELEGRAM_TOKEN');
     }
 }
